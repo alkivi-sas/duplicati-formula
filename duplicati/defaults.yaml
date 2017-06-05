@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+duplicati:
+  tmpdir: c:\tmp
+  server: duplicati-server
+  service: duplicati-service
+  serverconf: c:\duplicati\config\duplicati-config.json
+  serverconf_src: salt://duplicati/templates/duplicati-config.json.jinja
+  conf_dir: c:\duplicati\config\\
+  user: Administrateur
+  group: Administrateurs
+  config:
+    auth-username: ''
+    auth-password: ''
+    openstack-authuri: '' 
+    openstack-tenant-name: '' 
+    openstack-region: GRA1
+    dbpath: C:\\Windows\\system32\\config\\systemprofile\\AppData\\Roaming\\Duplicati\\KRLWFWAEBT.sqlite
+    sources: C:\\\\
+    encryption-module: aes
+    keep-time: 3M
+    passphrase: ''
+    dblock-size: 100mb
+    snapshot-policy: required
+    disable-module: console-password-input
