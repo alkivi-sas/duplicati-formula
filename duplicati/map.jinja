@@ -13,6 +13,7 @@ that differ from whats in defaults.yaml
         'Suse': {},
         'Arch': {},
         'RedHat': {},
+        'Windows': {},
   }
   , grain="os_family"
   , merge=salt['pillar.get']('duplicati:lookup'))

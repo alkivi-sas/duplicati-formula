@@ -8,14 +8,14 @@ include:
 
 duplicati-package:
   file.managed:
-    - name: {{ duplicati.tmpdir }}\packages\duplicati\duplicati-2.0.1.18_canary_2016-08-10-x64.msi
-    - source: https://github.com/duplicati/duplicati/releases/download/v2.0.1.20-2.0.1.20_canary_2016-09-01/duplicati-2.0.1.20_canary_2016-09-01-x64.msi
-    - source_hash: md5=311c8dca11020a835e86a705d91e12e8
+    - name: {{ duplicati.tmpdir }}\packages\duplicati\duplicati.msi
+    - source: https://updates.duplicati.com/experimental/duplicati-2.0.1.73_experimental_2017-07-15-x64.msi
+    - source_hash: sha1=1e19bbf6d03c9527ac9a98877db477d393672807
     - makedirs: True
 
 duplicati-install:
   cmd.run:
-    - name: ./duplicati-2.0.1.18_canary_2016-08-10-x64.msi /quiet
+    - name: ./duplicati.msi /qn ALLUSERS=1 /norestart
     - cwd: {{ duplicati.tmpdir }}\packages\duplicati\
     - shell: powershell
     - require: 
